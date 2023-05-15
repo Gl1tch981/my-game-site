@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Futuristic Website</h1>
+  <div class="container">
+    <div class="card">
+      <img src="/game_assets/tosstheturtle.png">
+      <a href="/game_assets/game_files/tosstheturtle/index.html">Toss The Turtle</a>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/2/600/400" alt="Image">
+      <h2>This is another card</h2>
+      <p>This is some more text inside the card.</p>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/3/600/400" alt="Image">
+      <h2>This is the last card</h2>
+      <p>This is the last bit of text inside the card.</p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Add some animation to the cards
+      $('.card').on('click', function() {
+        $(this).animate({
+          opacity: 0.5
+        }, 500, function() {
+          $(this).animate({
+            opacity: 1
+          }, 500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
